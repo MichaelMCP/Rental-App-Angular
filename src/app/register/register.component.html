@@ -4,7 +4,7 @@
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
           <label for="fullName">Full Name</label>
           <input type="text" class="form-control" name="fullName" [(ngModel)]="model.fullName" #fullName="ngModel" required />
-          <div *ngIf="f.submitted && !fullName.valid" class="help-block">A full name is required!</div>
+          <div *ngIf="f.submitted" class="help-block">A full name is required!</div>
       </div>
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
           <label for="email">Email</label>
