@@ -40,7 +40,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return Observable.of(new HttpResponse({ status: 200, body: body }));
                 } else {
                     // else return 400 bad request
-                    return Observable.throw('Username or password is incorrect');
+                    return Observable.throw('Email or password is incorrect');
                 }
             }
 
