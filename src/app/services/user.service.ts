@@ -14,9 +14,12 @@ export class UserService {
     private user: User;
     constructor(private http: Http) { }
 
-    login(username: string, password: string): Observable<User> {
-        if (username && password) {
-          const body = `user=${username}&pass=${password}`;
+    login(email: string, password: string): Observable<User> {
+
+      console.log(email);
+      console.log(password);
+        if (email && password) {
+          const body = `user=${email}&pass=${password}`;
           return this.http.post(this.appUrl, body, { withCredentials: true })
             .map(
             resp => {

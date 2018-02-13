@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
     model: any = {};
     loading = false;
     returnUrl: string;
-    private username: string;
+    private email: string;
     private password: string;
     public loggedUser: User;
 
@@ -53,19 +53,22 @@ export class LoginComponent implements OnInit {
     }
 
     login(): void {
-        console.log(this.username);
-        this.userService.login(this.username, this.password)
+        this.userService.login(this.model.email, this.model.password)
         .subscribe( user => {
+            console.log(this.model.email);
+            console.log(this.model.password);
           this.loggedUser = user;
-
+          console.log(this.loggedUser);
         });
+
+        
       }
 
     logout(): void {
         this.userService.logout()
         .subscribe();
         this.loggedUser = null;
-        this.username = null;
+        this.email = null;
         this.password = null;
       }
 }
