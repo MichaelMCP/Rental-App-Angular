@@ -10,8 +10,7 @@ import { AlertService, UserService } from '../services/index';
 export class RegisterComponent {
   model: any = {};
   loading = false;
-  
-  constructor(
+    constructor(
     private router: Router,
     private userService: UserService,
     private alertService: AlertService) { }

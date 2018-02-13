@@ -1,15 +1,56 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Headers, Http } from '@angular/http';
+
+import { Observable } from 'rxjs/observable';
+import { of } from 'rxjs/observable/of';
+import 'rxjs/add/operator/map';
 
 import { User } from '../models/index';
 
 @Injectable()
 export class UserService {
-    constructor(private http: HttpClient) { }
+    private appUrl = 'http://18.219.120.2:8080/login';
+    private headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+    private user: User;
+    constructor(private http: Http) { }
 
-    getAll() {
-        return this.http.get<User[]>('/api/users');
-    }
+    login(username: string, password: string): Observable<User> {
+        if (username && password) {
+          const body = `user=${username}&pass=${password}`;
+          return this.http.post(this.appUrl, body, { withCredentials: true })
+            .map(
+            resp => {
+              const user: User = resp.json() as User;
+              console.log(user);
+              return user;
+            }
+            );
+        } else {
+          return this.http.get(this.appUrl, { withCredentials: true })
+          .map(
+            resp => {
+              const user: User = resp.json() as User;
+              console.log(user);
+              return user;
+            }
+          );
+        }
+      }
+
+      logout(): Observable<number> {
+        console.log('logout called');
+        return this.http.delete(this.appUrl, { withCredentials: true })
+          .map(
+          success => {
+            this.user = null;
+            return success.status;
+          }
+          );
+      }
+
+    // getAll() {
+    //     return this.http.get<User[]>('/api/users');
+    // }
 
     getById(id: number) {
         return this.http.get('/api/users/' + id);
