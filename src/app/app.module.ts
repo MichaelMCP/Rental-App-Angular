@@ -16,6 +16,8 @@ import { AlertService, AuthenticationService, UserService } from './services/ind
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
+import { MyPropertiesComponent } from './my-properties/my-properties.component';
+import { MyPropertiesService } from './my-properties.service';
 
 @NgModule({
     imports: [
@@ -29,7 +31,8 @@ import { RegisterComponent } from './register/index';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        MyPropertiesComponent
     ],
     providers: [
         AuthGuard,
@@ -43,7 +46,8 @@ import { RegisterComponent } from './register/index';
         },
 
         // provider used to create fake backend
-        fakeBackendProvider
+        fakeBackendProvider, 
+        MyPropertiesService
     ],
     bootstrap: [AppComponent]
 })
