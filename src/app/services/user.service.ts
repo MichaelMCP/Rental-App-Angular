@@ -10,7 +10,9 @@ import { User } from '../models/index';
 @Injectable()
 export class UserService {
     private appUrl = 'http://18.219.120.2:8080/login';
-    private headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded'});
+    private headers = new Headers({
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/x-www-form-urlencoded'});
     private user: User;
     constructor(private http: Http) { }
 
