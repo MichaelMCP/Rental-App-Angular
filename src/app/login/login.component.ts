@@ -53,12 +53,15 @@ export class LoginComponent implements OnInit {
     }
 
     login(): void {
-        console.log(this.email);
-        this.userService.login(this.email, this.password)
+        this.userService.login(this.model.email, this.model.password)
         .subscribe( user => {
+            console.log(this.model.email);
+            console.log(this.model.password);
           this.loggedUser = user;
-
+          console.log(this.loggedUser);
         });
+
+        
       }
 
     logout(): void {
