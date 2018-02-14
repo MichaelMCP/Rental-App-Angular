@@ -8,17 +8,13 @@ import 'rxjs/add/operator/map';
 import {Property} from './property'
 @Injectable()
 export class MyPropertiesService {
-  private appUrl = '';
+  private appUrl = 'http://18.219.120.2:8080/my-properties';
   private headers = new Headers ({'Content-Type': 'application/json'});
   constructor(private http: Http) { }
 
-  getAllproperties(): Observable<Property[]>{
-    return this.http.get(this.appUrl, {withCredentials: true}).map(resp => resp.json() as Property[]);
-  }
 
-  getMyProperties(ownerId: number): Observable<Property[]>{
-    const url: string = this.appUrl+ '/' + ownerId;
-    return this.http.get(url, {withCredentials: true})
+  getMyProperties(): Observable<Property[]>{
+    return this.http.get(this.appUrl, {withCredentials: true})
     .map(resp => resp.json() as Property[]);
 
   }
