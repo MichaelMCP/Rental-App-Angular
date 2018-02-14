@@ -6,41 +6,23 @@ import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
 import { User } from '../models/index';
+import { NewUser } from '../models/newUser';
 
 @Injectable()
 export class UserService {
     private appUrl = 'http://18.219.120.2:8080/demo/login';
-    private headers = new Headers({
-      'Access-Control-Allow-Origin': '*',
-      'Content-Type': 'application/x-www-form-urlencoded'});
+    private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;
     constructor(private http: Http) { }
 
-    login(email: string, password: string): Observable<User> {
-
+    login(email: string, password: string) {
       console.log(email);
       console.log(password);
-        if (email && password) {
-          const body = `user=${email}&pass=${password}`;
-          return this.http.post(this.appUrl, body, { withCredentials: false })
-            .map(
-            resp => {
-              const user: User = resp.json() as User;
-              console.log(user);
-              return user;
-            }
-            );
-        } else {
-          return this.http.get(this.appUrl, { withCredentials: true })
-          .map(
-            resp => {
-              const user: User = resp.json() as User;
-              console.log(user);
-              return user;
-            }
-          );
-        }
-      }
+      const nu: NewUser = new NewUser();
+      nu.email = email;
+      nu.password = password;
+      return this.http.post(this.appUrl,  {withCredentials: true} ).map(resp => resp.json() as NewUser);
+    }
 
       logout(): Observable<number> {
         console.log('logout called');

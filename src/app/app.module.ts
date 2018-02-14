@@ -6,9 +6,12 @@ import { HttpClientModule} from '@angular/common/http';
 
 // used to create fake backend
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import { fakeBackendProvider } from './helpers/index';
 =======
 >>>>>>> c777d037f751a0b89ab80534207379fc24ab95a0
+=======
+>>>>>>> 5570af183bda61f93b9929882d6bc5b4ee109746
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
@@ -46,10 +49,13 @@ import { RegisterPropertyComponent } from './register-property/register-property
         UserService,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         // provider used to create fake backend
         // fakeBackendProvider
 =======
 >>>>>>> c777d037f751a0b89ab80534207379fc24ab95a0
+=======
+>>>>>>> 5570af183bda61f93b9929882d6bc5b4ee109746
     ],
     bootstrap: [AppComponent]
 })
