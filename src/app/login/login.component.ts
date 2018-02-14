@@ -7,7 +7,6 @@ import { UserService } from '../services/index';
 import { User } from '../models';
 import { NewUser } from '../models/newUser';
 
-
 @Component({
     selector: 'app-login',
     moduleId: module.id.toString(),
