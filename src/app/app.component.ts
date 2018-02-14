@@ -8,11 +8,4 @@ import '../assets/app.css';
     templateUrl: 'app.component.html'
 })
 
-<<<<<<< HEAD
-export class AppComponent { 
-
-
-}
-=======
 export class AppComponent { }
->>>>>>> fab0c977fa9e65d9546dcd2c5c92f6650d0b627f
