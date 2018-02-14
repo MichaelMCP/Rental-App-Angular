@@ -5,7 +5,6 @@ import { AlertService, AuthenticationService } from '../services/index';
 
 import { UserService } from '../services/index';
 import { User } from '../models';
-
 @Component({
     selector: 'app-login',
     moduleId: module.id.toString(),

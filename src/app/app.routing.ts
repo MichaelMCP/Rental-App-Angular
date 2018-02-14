@@ -6,12 +6,14 @@ import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { RegisterPropertyComponent } from './register-property/index';
 import { AuthGuard } from './guards/index';
+import {MyPropertiesComponent} from './my-properties/my-properties.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'register-property', component: RegisterPropertyComponent },
+    { path: 'my-properties', component: MyPropertiesComponent }
 
     // otherwise redirect to home
     // { path: '**', redirectTo: '' }
