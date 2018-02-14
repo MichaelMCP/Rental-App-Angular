@@ -60,8 +60,6 @@ export class LoginComponent implements OnInit {
           this.loggedUser = user;
           console.log(this.loggedUser);
         });
-
-        
       }
 
     logout(): void {
