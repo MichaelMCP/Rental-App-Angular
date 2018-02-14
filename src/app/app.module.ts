@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
+<<<<<<< HEAD
+=======
+// used to create fake backend
+
+>>>>>>> 813bab7d0c0c20928d8f9fa2524e85a648b87ca1
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 
@@ -38,7 +43,10 @@ import { MyPropertiesService } from './my-properties.service';
         AuthenticationService,
         UserService,
 
+<<<<<<< HEAD
         MyPropertiesService
+=======
+>>>>>>> 813bab7d0c0c20928d8f9fa2524e85a648b87ca1
     ],
     bootstrap: [AppComponent]
 })
