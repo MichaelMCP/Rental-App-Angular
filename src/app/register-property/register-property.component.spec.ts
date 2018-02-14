@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewpropertyComponent } from './viewproperty.component';
+import { RegisterPropertyComponent } from './register-property.component';
 
-describe('RegisterComponent', () => {
-  let component: ViewpropertyComponent;
-  let fixture: ComponentFixture<ViewpropertyComponent>;
+describe('RegisterPropertyComponent', () => {
+  let component: RegisterPropertyComponent;
+  let fixture: ComponentFixture<RegisterPropertyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ViewpropertyComponent ]
+      declarations: [ RegisterPropertyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ViewpropertyComponent);
+    fixture = TestBed.createComponent(RegisterPropertyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
