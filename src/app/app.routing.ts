@@ -12,12 +12,9 @@ const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-<<<<<<< HEAD
-    { path: 'my-properties', component: MyPropertiesComponent },
-=======
     { path: 'register-property', component: RegisterPropertyComponent },
+    { path: 'my-properties', component: MyPropertiesComponent }
 
->>>>>>> 644de7574966ce430477d08aa078f6f12cbccd95
     // otherwise redirect to home
     // { path: '**', redirectTo: '' }
 ];
