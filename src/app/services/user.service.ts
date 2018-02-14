@@ -22,7 +22,7 @@ export class UserService {
       console.log(password);
         if (email && password) {
           const body = `user=${email}&pass=${password}`;
-          return this.http.post(this.appUrl, body, { withCredentials: true })
+          return this.http.post(this.appUrl, body, { withCredentials: false })
             .map(
             resp => {
               const user: User = resp.json() as User;
