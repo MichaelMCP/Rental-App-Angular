@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 // used to create fake backend
 import { fakeBackendProvider } from './helpers/index';
 
 import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing';
+// import { AppRoutingModule } from './app.component';
 
 import { AlertComponent } from './directives/index';
 import { AuthGuard } from './guards/index';
@@ -23,8 +25,9 @@ import { MyPropertiesService } from './my-properties.service';
     imports: [
         BrowserModule,
         FormsModule,
+        HttpModule,
         HttpClientModule,
-        routing
+        AppRoutingModule
     ],
     declarations: [
         AppComponent,
