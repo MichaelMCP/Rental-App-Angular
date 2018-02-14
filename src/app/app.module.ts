@@ -12,11 +12,11 @@ import { AppRoutingModule } from './app.routing';
 
 import { AlertComponent } from './directives/index';
 import { AuthGuard } from './guards/index';
-import { JwtInterceptor } from './helpers/index';
 import { AlertService, AuthenticationService, UserService } from './services/index';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
+import { ViewpropertyComponent } from './viewproperty/index';
 
 @NgModule({
     imports: [
@@ -31,7 +31,8 @@ import { RegisterComponent } from './register/index';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        ViewpropertyComponent
     ],
     providers: [
         AuthGuard,
