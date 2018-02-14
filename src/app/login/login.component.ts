@@ -5,7 +5,6 @@ import { AlertService, AuthenticationService } from '../services/index';
 
 import { UserService } from '../services/index';
 import { User } from '../models';
-
 @Component({
     selector: 'app-login',
     moduleId: module.id.toString(),
@@ -31,10 +30,8 @@ export class LoginComponent implements OnInit {
     ngOnInit() {
         // reset login status
         // this.authenticationService.logout();
-
         // get return url from route parameters or default to '/'
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-
         this.userService.login(null, null).subscribe( user => {
             this.loggedUser = user; });
     }
