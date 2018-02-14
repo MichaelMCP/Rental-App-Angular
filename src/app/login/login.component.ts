@@ -5,7 +5,11 @@ import { AlertService, AuthenticationService } from '../services/index';
 
 import { UserService } from '../services/index';
 import { User } from '../models';
+<<<<<<< HEAD
+=======
+import { NewUser } from '../models/newUser';
 
+>>>>>>> a696f66be0ea1a91a846d5492730689a20d5103b
 @Component({
     selector: 'app-login',
     moduleId: module.id.toString(),
@@ -18,7 +22,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     private email: string;
     private password: string;
-    public loggedUser: User;
+    public loggedUser: NewUser;
 
     constructor(
         private route: ActivatedRoute,
