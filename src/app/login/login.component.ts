@@ -5,6 +5,7 @@ import { AlertService, AuthenticationService } from '../services/index';
 
 import { UserService } from '../services/index';
 import { User } from '../models';
+import { NewUser } from '../models/newUser';
 
 @Component({
     selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     private email: string;
     private password: string;
-    public loggedUser: User;
+    public loggedUser: NewUser;
 
     constructor(
         private route: ActivatedRoute,
