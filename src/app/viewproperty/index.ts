@@ -1,1 +1,1 @@
-export * from './Viewproperty.component';
+export * from './viewproperty.component';
