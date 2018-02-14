@@ -14,6 +14,7 @@ import { AlertService, AuthenticationService, UserService } from './services/ind
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
+import { RegisterPropertyComponent } from './register-property/register-property.component';
 
 @NgModule({
     imports: [
@@ -28,7 +29,8 @@ import { RegisterComponent } from './register/index';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        RegisterPropertyComponent
     ],
     providers: [
         AuthGuard,
