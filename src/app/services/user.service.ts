@@ -21,7 +21,7 @@ export class UserService {
       const nu: NewUser = new NewUser();
       nu.email = email;
       nu.password = password;
-      return this.http.post(this.appUrl,  {withCredentials: true} ).map(resp => resp.json() as NewUser);
+      return this.http.post(this.appUrl,  { headers: Headers, withCredentials: true} ).map(resp => resp.json() as NewUser);
     }
 
       logout(): Observable<number> {
