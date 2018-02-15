@@ -6,7 +6,6 @@ import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
 import { User } from '../models/index';
-import { NewUser } from '../models/newUser';
 
 @Injectable()
 export class UserService {
@@ -21,7 +20,7 @@ export class UserService {
       console.log(password);
       const nu: User = new User();
       nu.email = email;
-      nu.pass = password;
+      nu.pass = password; 
       return this.http.post(this.appUrl, nu, { headers: this.headers, withCredentials: true} ).map(resp => resp.json() as User);
     }
 

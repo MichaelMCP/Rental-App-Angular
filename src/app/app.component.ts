@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { UserService } from './services/index';
 import '../assets/app.css';
 
 @Component({
@@ -9,4 +9,12 @@ import '../assets/app.css';
     templateUrl: 'app.component.html'
 })
 
-export class AppComponent { }
+export class AppComponent {
+    constructor(
+        private userService: UserService
+    ) { }
+    logout(){
+        this.userService.logout();
+        localStorage.removeItem('currentUser');
+    }
+ }
