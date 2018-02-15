@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     private email: string;
     private password: string;
-    public loggedUser: NewUser;
+    public loggedUser: User;
 
     constructor(
         private route: ActivatedRoute,
@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
         this.userService.login(null, null).subscribe( user => {
             this.loggedUser = user; });
     }
-<<<<<<< HEAD
 
     // login1() {
     //     this.loading = true;
@@ -52,8 +51,7 @@ export class LoginComponent implements OnInit {
     //             });
     // }
 
-=======
->>>>>>> 335536b203acaafed85017c177c052f19d3bd69c
+
     login(): void {
         this.userService.login(this.model.email, this.model.password)
         .subscribe( user => {

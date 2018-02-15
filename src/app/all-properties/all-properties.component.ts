@@ -10,12 +10,14 @@ import {Property} from '../property'
 })
 export class AllPropertiesComponent implements OnInit {
   public AllProperties: Property[];
+  public test = '60';
   constructor(
     private allPropertiesService: AllPropertiesService
   ) { }
 
   ngOnInit() {
-    this.allPropertiesService.getAllProperties().subscribe(proList =>this.AllProperties = proList);
+    this.allPropertiesService.getAllProperties().subscribe(allpro =>this.AllProperties = allpro);
+
+    }
   }
 
-}

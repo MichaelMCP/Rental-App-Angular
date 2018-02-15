@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 import {Property} from './property'
 @Injectable()
 export class AllPropertiesService {
-  private appUrl = 'http://18.219.120.2:8080/demo/all-properties';
+  private appUrl = 'http://localhost:8080/RentalProject/Properties';
   private headers = new Headers ({'Content-Type': 'application/json'});
   constructor(private http: Http) { }
 
