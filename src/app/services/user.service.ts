@@ -10,7 +10,7 @@ import { User } from '../models/index';
 @Injectable()
 export class UserService {
     // private appUrl = 'http://18.219.120.2:8080/demo/login';
-    private appUrl = 'http://localhost:8081/RentalProject/login';
+    private appUrl = 'http://localhost:8080/RentalProject';
     private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;
     constructor(private http: Http) { }
@@ -20,7 +20,8 @@ export class UserService {
       console.log(password);
       const nu: User = new User();
       nu.email = email;
-      nu.pass = password; 
+      nu.pass = password;
+      this.appUrl = 'http://localhost:8080/RentalProject/login';
       return this.http.post(this.appUrl, nu, { headers: this.headers, withCredentials: true} ).map(resp => resp.json() as User);
     }
 
