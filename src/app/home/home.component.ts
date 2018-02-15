@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
     ngOnInit() {
         // this.loadAllUsers();
+        console.log(this.currentUser);
     }
 
     deleteUser(id: number) {

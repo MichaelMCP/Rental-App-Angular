@@ -5,7 +5,6 @@ import { AlertService, AuthenticationService } from '../services/index';
 
 import { UserService } from '../services/index';
 import { User } from '../models';
-import { NewUser } from '../models/newUser';
 
 @Component({
     selector: 'app-login',
@@ -34,8 +33,8 @@ export class LoginComponent implements OnInit {
         // this.authenticationService.logout();
         // get return url from route parameters or default to '/'
         // this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-        this.userService.login(null, null).subscribe( user => {
-            this.loggedUser = user; });
+        // this.userService.login(null, null).subscribe( user => {
+        //     this.loggedUser = user; });
     }
 
     // login1() {
@@ -65,6 +64,7 @@ export class LoginComponent implements OnInit {
             this.router.navigateByUrl('/login');
           } else {
               console.log('hello');
+              localStorage.setItem('currentUser', JSON.stringify(user));
             this.router.navigateByUrl('/home');
           }
 
