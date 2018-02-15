@@ -11,7 +11,11 @@ import { NewUser } from '../models/newUser';
 @Injectable()
 export class UserService {
     // private appUrl = 'http://18.219.120.2:8080/demo/login';
+<<<<<<< HEAD
     private appUrl = 'http://localhost:8081/RentalProject/login';
+=======
+    private appUrl = 'http://localhost:8080/RentalProject';
+>>>>>>> 335536b203acaafed85017c177c052f19d3bd69c
     private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;
     constructor(private http: Http) { }
@@ -22,8 +26,23 @@ export class UserService {
       const nu: User = new User();
       nu.email = email;
       nu.pass = password;
+      this.appUrl = 'http://localhost:8080/RentalProject/login';
       return this.http.post(this.appUrl, nu, { headers: this.headers, withCredentials: true} ).map(resp => resp.json() as User);
     }
+
+    register(email: string, password: string, fullName: string, role: number): Observable<User> {
+        const nu: User = new User();
+        nu.email = email;
+        nu.pass = password;
+        nu.fullName = fullName;
+        nu.role = 1;
+        console.log(email);
+        console.log(password);
+        console.log(fullName);
+        console.log(role);
+        this.appUrl = 'http://localhost:8080/RentalProject/register';
+        return this.http.post(this.appUrl, nu, { headers: this.headers, withCredentials: true} ).map(resp => resp.json() as User);
+      }
 
       logout(): Observable<number> {
         console.log('logout called');
