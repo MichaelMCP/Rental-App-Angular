@@ -10,10 +10,7 @@ import { NewUser } from '../models/newUser';
 
 @Injectable()
 export class UserService {
-<<<<<<< HEAD
-=======
     // private appUrl = 'http://18.219.120.2:8080/demo/login';
->>>>>>> d84ac68533ff8ff0d8e65590ba08baf7a53adda2
     private appUrl = 'http://localhost:8080/RentalProject/login';
     private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;

@@ -6,10 +6,6 @@ import { AlertService, AuthenticationService } from '../services/index';
 import { UserService } from '../services/index';
 import { User } from '../models';
 import { NewUser } from '../models/newUser';
-<<<<<<< HEAD
-=======
-
->>>>>>> d84ac68533ff8ff0d8e65590ba08baf7a53adda2
 @Component({
     selector: 'app-login',
     moduleId: module.id.toString(),

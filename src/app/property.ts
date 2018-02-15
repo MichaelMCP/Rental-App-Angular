@@ -1,11 +1,13 @@
+import { User } from './models/index';
 export class Property{
-    property_id: number;
-    owner_id: number;
+    propertyId: number;
+    owner: User;
     address1: string;
     address2: string;
     city: string;
-    states: string;
+    state: string;
     zipcode: string;
-    current_Rent_Price: number; 
+    currentRentPrice: number; 
     rating: number;
+    availability: number;
 }

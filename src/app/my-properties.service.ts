@@ -19,12 +19,9 @@ export class MyPropertiesService {
 
   }
 
-  deleteProperties(property: Property) {
-    const body = JSON.stringify(property);
-    const url = this.appUrl + '/' + property.property_id;
-    return this.http.post(url,body, {headers: this.headers, withCredentials: true})
-    .subscribe(resp => console.log(resp.json()));
-
+  deleteProperties(pro: Property): Observable<{}> {
+    const body = JSON.stringify(pro);
+    return this.http.post(this.appUrl,body ,{headers: this.headers, withCredentials: true});
   }
 
 }
