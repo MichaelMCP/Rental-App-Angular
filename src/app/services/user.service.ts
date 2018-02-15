@@ -6,16 +6,12 @@ import { of } from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
 import { User } from '../models/index';
-import { NewUser } from '../models/newUser';
 
 @Injectable()
 export class UserService {
     // private appUrl = 'http://18.219.120.2:8080/demo/login';
-<<<<<<< HEAD
-    private appUrl = 'http://localhost:8081/RentalProject/login';
-=======
+
     private appUrl = 'http://localhost:8080/RentalProject';
->>>>>>> 335536b203acaafed85017c177c052f19d3bd69c
     private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;
     constructor(private http: Http) { }
