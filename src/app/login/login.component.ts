@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     private email: string;
     private password: string;
-    public loggedUser: User;
+    public loggedUser: NewUser;
 
     constructor(
         private route: ActivatedRoute,
@@ -38,18 +38,18 @@ export class LoginComponent implements OnInit {
             this.loggedUser = user; });
     }
 
-    login1() {
-        this.loading = true;
-        this.authenticationService.login(this.model.email, this.model.password)
-            .subscribe(
-                data => {
-                    this.router.navigate([this.returnUrl]);
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });
-    }
+    // login1() {
+    //     this.loading = true;
+    //     this.authenticationService.login(this.model.email, this.model.password)
+    //         .subscribe(
+    //             data => {
+    //                 this.router.navigate([this.returnUrl]);
+    //             },
+    //             error => {
+    //                 this.alertService.error(error);
+    //                 this.loading = false;
+    //             });
+    // }
 
     login(): void {
         this.userService.login(this.model.email, this.model.password)
@@ -73,11 +73,11 @@ export class LoginComponent implements OnInit {
 
       }
 
-    logout(): void {
-        this.userService.logout()
-        .subscribe();
-        this.loggedUser = null;
-        this.email = null;
-        this.password = null;
-      }
+//     logout(): void {
+//         this.userService.logout()
+//         .subscribe();
+//         this.loggedUser = null;
+//         this.email = null;
+//         this.password = null;
+//       }
 }
