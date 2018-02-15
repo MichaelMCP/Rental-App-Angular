@@ -10,18 +10,19 @@ import { NewUser } from '../models/newUser';
 
 @Injectable()
 export class UserService {
-    private appUrl = 'http://18.219.120.2:8080/demo/login2';
+    // private appUrl = 'http://18.219.120.2:8080/demo/login';
+    private appUrl = 'http://localhost:8080/RentalProject/login';
     private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;
     constructor(private http: Http) { }
 
-    login(email: string, password: string) {
+    login(email: string, password: string): Observable<User> {
       console.log(email);
       console.log(password);
-      const nu: NewUser = new NewUser();
+      const nu: User = new User();
       nu.email = email;
-      nu.password = password;
-      return this.http.post(this.appUrl,  { headers: Headers, withCredentials: true} ).map(resp => resp.json() as NewUser);
+      nu.pass = password;
+      return this.http.post(this.appUrl, nu, { headers: this.headers, withCredentials: true} ).map(resp => resp.json() as User);
     }
 
       logout(): Observable<number> {
