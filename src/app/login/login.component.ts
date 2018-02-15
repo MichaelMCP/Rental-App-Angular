@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     returnUrl: string;
     private email: string;
     private password: string;
-    public loggedUser: NewUser;
+    public loggedUser: User;
 
     constructor(
         private route: ActivatedRoute,
@@ -57,8 +57,20 @@ export class LoginComponent implements OnInit {
             console.log(this.model.email);
             console.log(this.model.password);
           this.loggedUser = user;
+
+          console.log(user);
+          if (user == null) {
+            console.log('hello1');
+            this.router.navigateByUrl('/login');
+          } else {
+              console.log('hello');
+            this.router.navigateByUrl('/home');
+          }
+
+
           console.log(this.loggedUser);
         });
+
       }
 
     logout(): void {
