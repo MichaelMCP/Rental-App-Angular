@@ -11,6 +11,7 @@ import {MyPropertiesComponent} from './my-properties/my-properties.component';
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
+    { path: 'home', component: HomeComponent },
     { path: 'register', component: RegisterComponent },
     { path: 'register-property', component: RegisterPropertyComponent },
     { path: 'my-properties', component: MyPropertiesComponent }

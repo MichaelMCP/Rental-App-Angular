@@ -2,7 +2,7 @@
   Register Your Property
 </h2>
 
-<form name="form">
+<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
 
   <div class="row">
     <div class="col-md-8">
@@ -57,7 +57,7 @@
     <div class="col-md-6">
     </div>
     <div class="col-md-2">
-      <button type="submit" class="btn btn-primary submitSpacing">Submit</button>
+      <button type="submit" [disabled]="loading" class="btn btn-primary submitSpacing">Submit</button>
     </div>
   </div>
 
