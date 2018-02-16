@@ -1,0 +1,92 @@
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
+
+      bootstrap.min.css">
+  </head>
+  <body>
+    <h2>Property List</h2>
+    <table class="ptable">
+      <tr>
+        <th>Property Owner</th>
+        <th>Address</th>
+        <th>Rental Price</th>
+        <th>Rating</th>
+        <th>Available</th>
+      <tr *ngFor="let x of AllProperties">
+        <td>{{x.owner.fullName}}</td>
+        <td>{{x.address1}} {{x.address2}} {{x.city}}, {{x.state}} {{x.zipcode}}</td>
+        <td>{{x.currentRentPrice}}</td>
+        <td>{{x.rating}}</td>
+        <td>{{x.availability}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<!--<html>
+
+	<head>
+
+		<title>Rent a Property</title>
+
+  	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
+
+		bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	</head>
+
+	<body>
+
+		<div class="container">
+
+		<h1>Properties</h1>
+
+		<table class="table table-hover">
+
+			<thead>
+
+				<tr>
+
+					<th>Property Owner</th>
+
+					<th>Address</th>
+
+					<th>Rental Price</th>
+
+					<th>Rating</th>
+
+				<tr>
+
+			</thead>
+
+			<tbody>
+
+				<tr ng-repeat="x in proList">
+
+				<td>{{x.owner.fullName}}</td>
+
+				<td>{{x.address1}}</td>
+
+				<td>{{x.currentRentPrice}}</td>
+
+				<td>{{x.rating}}</td>
+
+				<td><a ng-href='info/{{ x.propertyId }}' class='btn btn-info'>Details</a></td>
+
+				</tr>
+
+
+			</tbody>
+
+		</table>
+
+		</div>
+
+	</body>
+
+</html>-->

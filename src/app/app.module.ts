@@ -13,11 +13,13 @@ import { AuthGuard } from './guards/index';
 // import { JwtInterceptor } from './helpers/index';
 import { AlertService, AuthenticationService, UserService } from './services/index';
 import {MyPropertiesService} from './my-properties.service'
+import {AllPropertiesService} from './all-properties.service'
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { RegisterPropertyComponent } from './register-property/register-property.component';
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
+import { AllPropertiesComponent } from './all-properties/all-properties.component';
 
 @NgModule({
     imports: [
@@ -34,14 +36,16 @@ import { MyPropertiesComponent } from './my-properties/my-properties.component';
         LoginComponent,
         RegisterComponent,
         RegisterPropertyComponent,
-        MyPropertiesComponent
+        MyPropertiesComponent,
+        AllPropertiesComponent
     ],
     providers: [
         AuthGuard,
         AlertService,
         AuthenticationService,
         UserService,
-        MyPropertiesService
+        MyPropertiesService,
+        AllPropertiesService
     ],
     bootstrap: [AppComponent]
 })

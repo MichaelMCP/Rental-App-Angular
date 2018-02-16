@@ -1,31 +1,45 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
-import { AlertService, UserService } from '../services/index';
+import { UserService } from '../services/index';
+import { User } from '../models';
+
+import { AlertService } from '../services/index';
 
 @Component({
+  selector: 'app-register',
   moduleId: module.id.toString(),
   templateUrl: './register.component.html'
 })
 export class RegisterComponent {
   model: any = {};
-  loading = false;
-    constructor(
-    private router: Router,
-    private userService: UserService,
-    private alertService: AlertService) { }
+  returnUrl: string;
+  private email: string;
+  private password: string;
+  private fullName: string;
+  private role: number;
+  public loggedUser: User;
 
+    constructor(
+      private route: ActivatedRoute,
+      private router: Router,
+      private alertService: AlertService,
+      private userService: UserService) { }
+
+    // tslint:disable-next-line:use-life-cycle-interface
+    ngOnInit() {
+    }
     register() {
-      this.loading = true;
-      this.userService.create(this.model)
+      this.userService.register(this.model.email, this.model.password, this.model.fullName, this.model.role)
           .subscribe(
-              data => {
-                  this.alertService.success('Registration successful', true);
-                  this.router.navigate(['/login']);
-              },
-              error => {
-                  this.alertService.error(error);
-                  this.loading = false;
+              user => {
+                  this.loggedUser = user;
+
+                  if (user == null) {
+                    this.router.navigate(['/login']);
+                  } else {
+                    this.router.navigate(['/login']);
+                  }
               });
   }
 }
