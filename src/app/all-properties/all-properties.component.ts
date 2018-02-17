@@ -2,7 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { AllPropertiesService } from '../all-properties.service';
 
-import {Property} from '../property'
+import {Property} from '../property';
+
 @Component({
   selector: 'app-all-properties',
   templateUrl: './all-properties.component.html',
@@ -16,7 +17,7 @@ export class AllPropertiesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.allPropertiesService.getAllProperties().subscribe(allpro =>this.AllProperties = allpro);
+    this.allPropertiesService.getAllProperties().subscribe(allpro => this.AllProperties = allpro);
 
     }
   }
