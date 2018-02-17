@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { MyPropertiesService } from '../my-properties.service';
 
-import {Property} from '../property'
+import {Property} from '../property';
 @Component({
   selector: 'app-my-properties',
   templateUrl: './my-properties.component.html',
@@ -18,15 +18,14 @@ export class MyPropertiesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.myPropertiesService.getMyProperties().subscribe(proList =>this.myProperties = proList);
+    this.myPropertiesService.getMyProperties().subscribe(proList => this.myProperties = proList);
 
   }
-  deletePro(pro: Property): void{
-    this.myProperties.splice(this.myProperties.indexOf(pro),1);
+  deletePro(pro: Property): void {
+    this.myProperties.splice(this.myProperties.indexOf(pro), 1);
     this.myPropertiesService.deleteProperties(pro).subscribe();
 
   }
-  
 }
 
 

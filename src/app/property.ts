@@ -1,5 +1,5 @@
 import { User } from './models/index';
-export class Property{
+export class Property {
     propertyId: number;
     owner: User;
     address1: string;
@@ -7,7 +7,7 @@ export class Property{
     city: string;
     state: string;
     zipcode: string;
-    currentRentPrice: number; 
+    currentRentPrice: number;
     rating: number;
     availability: number;
 }

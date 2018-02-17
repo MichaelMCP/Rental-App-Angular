@@ -5,7 +5,7 @@ import '../assets/app.css';
 
 @Component({
     moduleId: module.id.toString(),
-    selector: 'app',
+    selector: 'app-root',
     templateUrl: 'app.component.html'
 })
 
@@ -13,7 +13,7 @@ export class AppComponent {
     constructor(
         private userService: UserService
     ) { }
-    logout(){
+    logout() {
         this.userService.logout();
         localStorage.removeItem('currentUser');
     }

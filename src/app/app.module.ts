@@ -12,8 +12,8 @@ import { AlertComponent } from './directives/index';
 import { AuthGuard } from './guards/index';
 // import { JwtInterceptor } from './helpers/index';
 import { AlertService, AuthenticationService, UserService } from './services/index';
-import {MyPropertiesService} from './my-properties.service'
-import {AllPropertiesService} from './all-properties.service'
+import { MyPropertiesService } from './my-properties.service';
+import { AllPropertiesService } from './all-properties.service';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';

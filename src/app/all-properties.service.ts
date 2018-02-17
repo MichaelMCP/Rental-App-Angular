@@ -5,7 +5,7 @@ import {Observable} from 'rxjs/observable';
 import {of} from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
-import {Property} from './property'
+import {Property} from './property';
 @Injectable()
 export class AllPropertiesService {
   private appUrl = 'http://localhost:8080/RentalProject/Properties';
@@ -13,7 +13,7 @@ export class AllPropertiesService {
   constructor(private http: Http) { }
 
 
-  getAllProperties(): Observable<Property[]>{
+  getAllProperties(): Observable<Property[]> {
     return this.http.get(this.appUrl, {withCredentials: true})
     .map(resp => resp.json() as Property[]);
 
