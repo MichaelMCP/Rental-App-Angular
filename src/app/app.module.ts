@@ -20,7 +20,11 @@ import { RegisterComponent } from './register/index';
 import { RegisterPropertyComponent } from './register-property/register-property.component';
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
+<<<<<<< HEAD
 import { PaymentComponent } from './payment/payment.component';
+=======
+import { AboutComponent } from './about/about.component';
+>>>>>>> 2d1270367f50baf5a659a31c68cf235747fd6d75
 
 @NgModule({
     imports: [
@@ -39,7 +43,11 @@ import { PaymentComponent } from './payment/payment.component';
         RegisterPropertyComponent,
         MyPropertiesComponent,
         AllPropertiesComponent,
+<<<<<<< HEAD
         PaymentComponent
+=======
+        AboutComponent
+>>>>>>> 2d1270367f50baf5a659a31c68cf235747fd6d75
     ],
     providers: [
         AuthGuard,

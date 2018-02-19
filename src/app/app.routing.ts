@@ -8,7 +8,11 @@ import { RegisterPropertyComponent } from './register-property/index';
 import { AuthGuard } from './guards/index';
 import {MyPropertiesComponent} from './my-properties/my-properties.component';
 import {AllPropertiesComponent} from './all-properties/all-properties.component';
+<<<<<<< HEAD
 import {PaymentComponent} from './payment/payment.component';
+=======
+import {AboutComponent} from './about/about.component';
+>>>>>>> 2d1270367f50baf5a659a31c68cf235747fd6d75
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
@@ -17,8 +21,13 @@ const appRoutes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'register-property', component: RegisterPropertyComponent },
     { path: 'my-properties', component: MyPropertiesComponent },
+<<<<<<< HEAD
     { path: 'payment', component: PaymentComponent },
     { path: 'Properties', component: AllPropertiesComponent }
+=======
+    { path: 'Properties', component: AllPropertiesComponent },
+    { path: 'about', component: AboutComponent }
+>>>>>>> 2d1270367f50baf5a659a31c68cf235747fd6d75
 
     // otherwise redirect to home
     // { path: '**', redirectTo: '' }
