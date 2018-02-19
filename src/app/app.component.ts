@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from './services/index';
+import {User} from './models';
 import '../assets/app.css';
 
 @Component({
@@ -9,11 +10,22 @@ import '../assets/app.css';
     templateUrl: 'app.component.html'
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit{
+    public currentUser: User;
     constructor(
         private userService: UserService
     ) { }
+<<<<<<< HEAD
     logout() {
+=======
+
+    ngOnInit() {
+      }
+    isEmployee(): boolean{
+        return this.userService.getCurrentUser();
+    }
+    logout(){
+>>>>>>> viewAllProperties
         this.userService.logout();
         localStorage.removeItem('currentUser');
     }
