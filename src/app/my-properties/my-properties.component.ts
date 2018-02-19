@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { MyPropertiesService } from '../my-properties.service';
+import { MyPropertiesService } from '../services/my-properties.service';
 
-import {Property} from '../property'
+import {Property} from '../models/property'
 @Component({
   selector: 'app-my-properties',
   templateUrl: './my-properties.component.html',
@@ -24,7 +24,6 @@ export class MyPropertiesComponent implements OnInit {
   deletePro(pro: Property): void{
     this.myProperties.splice(this.myProperties.indexOf(pro),1);
     this.myPropertiesService.deleteProperties(pro).subscribe();
-
   }
   
 }

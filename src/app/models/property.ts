@@ -1,4 +1,4 @@
-import { User } from './models/index';
+import { User } from './index';
 export class Property{
     propertyId: number;
     owner: User;

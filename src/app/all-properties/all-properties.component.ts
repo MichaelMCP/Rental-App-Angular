@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { AllPropertiesService } from '../all-properties.service';
 
-import {Property} from '../property'
+import {Property} from '../models/property'
 @Component({
   selector: 'app-all-properties',
   templateUrl: './all-properties.component.html',

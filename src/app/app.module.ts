@@ -12,14 +12,16 @@ import { AlertComponent } from './directives/index';
 import { AuthGuard } from './guards/index';
 // import { JwtInterceptor } from './helpers/index';
 import { AlertService, AuthenticationService, UserService } from './services/index';
-import {MyPropertiesService} from './my-properties.service'
-import {AllPropertiesService} from './all-properties.service'
+import {MyPropertiesService} from './services/my-properties.service';
+import {EditUserService} from './services/edit-user.service'
+import {AllPropertiesService} from './all-properties.service';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { RegisterPropertyComponent } from './register-property/register-property.component';
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
     imports: [
@@ -37,7 +39,8 @@ import { AllPropertiesComponent } from './all-properties/all-properties.componen
         RegisterComponent,
         RegisterPropertyComponent,
         MyPropertiesComponent,
-        AllPropertiesComponent
+        AllPropertiesComponent,
+        EditUserComponent
     ],
     providers: [
         AuthGuard,
@@ -45,7 +48,8 @@ import { AllPropertiesComponent } from './all-properties/all-properties.componen
         AuthenticationService,
         UserService,
         MyPropertiesService,
-        AllPropertiesService
+        AllPropertiesService,
+        EditUserService
     ],
     bootstrap: [AppComponent]
 })
