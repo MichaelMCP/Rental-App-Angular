@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/index';
 import { RegisterPropertyComponent } from './register-property/register-property.component';
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
     imports: [
@@ -37,7 +38,8 @@ import { AllPropertiesComponent } from './all-properties/all-properties.componen
         RegisterComponent,
         RegisterPropertyComponent,
         MyPropertiesComponent,
-        AllPropertiesComponent
+        AllPropertiesComponent,
+        AboutComponent
     ],
     providers: [
         AuthGuard,
