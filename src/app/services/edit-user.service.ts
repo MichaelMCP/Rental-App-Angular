@@ -9,7 +9,7 @@ import {User} from '../models';
 
 @Injectable()
 export class EditUserService {
-  private appUrl = 'http://localhost:8080/RentalProject/editUser';
+  private appUrl = 'http://localhost:8080/RentalProject/editUsers';
   private headers = new Headers ({'Content-Type': 'application/json'});
 
   constructor(private http: Http) { }
