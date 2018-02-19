@@ -2,9 +2,12 @@
   <head>
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
 
-      bootstrap.min.css">
+			bootstrap.min.css">
+		
   </head>
   <body>
+			<label for="meeting">Start Date : </label><input id="startDate" type="date" />
+			<label for="meeting">End Date : </label><input id="endDate" type="date" /> 
     <h2>Property List</h2>
     <table class="ptable">
       <tr>
@@ -12,13 +15,15 @@
         <th>Address</th>
         <th>Rental Price</th>
         <th>Rating</th>
-        <th>Available</th>
+				<th>Available</th>
+				<th>Rent this</th>
       <tr *ngFor="let x of AllProperties">
         <td>{{x.owner.fullName}}</td>
         <td>{{x.address1}} {{x.address2}} {{x.city}}, {{x.state}} {{x.zipcode}}</td>
         <td>{{x.currentRentPrice}}</td>
         <td>{{x.rating}}</td>
-        <td>{{x.availability}}</td>
+				<td>{{x.availability}}</td>
+				<td><input class="btn btn-primary"  type="submit" value='Rent this!' name={{x.propertyId}} id="rentThis"></td>
       </tr>
     </table>
   </body>
