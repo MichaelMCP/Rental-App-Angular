@@ -2,13 +2,14 @@
   Register Your Property
 </h2>
 
-<form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+<form name="form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
 
   <div class="row">
     <div class="col-md-8">
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !address.valid }">
         <label>Address Line 1</label>
-        <input class="form-control" type="text" name="address1" style="width:100%" />
+        <input class="form-control" type="text" name="address1" style="width:100%" [(ngModel)]="model.address" #address="ngModel" required />
+        <div *ngIf="f.submitted && !address.valid" class="help-block">An address is required!</div>
       </div>
     </div>
   </div>
@@ -24,24 +25,34 @@
 
   <div class="row">
     <div class="col-md-4">
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !city.valid }">
         <label>City</label>
-        <input type="text" class="form-control" name="city" style="width:100%" />
+        <input type="text" class="form-control" name="city" style="width:100%" [(ngModel)]="model.city" #city="ngModel" required />
+        <div *ngIf="f.submitted && !city.valid" class="help-block">Please enter a city.</div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !state.valid }">
           <label>State</label>
-          <input type="text" class="form-control" name="state" style="width:100%" />
+          <input type="text" class="form-control" name="states" style="width:100%" [(ngModel)]="model.states" #states="ngModel" required />
+          <div *ngIf="f.submitted && !states.valid" class="help-block">Please enter a state.</div>
         </div>
     </div>
   </div>
 
   <div class="row">
+      <div class="col-md-4">
+          <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !zipcode.valid }">
+            <label>Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" style="width:100%" [(ngModel)]="model.zipCode" #zipCode="ngModel" required />
+            <div *ngIf="f.submitted && !zipCode.valid" class="help-block">Enter your zip code.</div>
+          </div>
+        </div>
     <div class="col-md-4">
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !price.valid }">
         <label>Renting Price</label>
-        <input type="text" class="form-control" name="rentingPrice" style="width:100%" />
+        <input type="text" class="form-control" name="rentingPrice" style="width:100%" [(ngModel)]="model.rentingPrice" #rentingPrice="ngModel" required />
+        <div *ngIf="f.submitted && !rentingPrice.valid" class="help-block">Enter your rental price.</div>
       </div>
     </div>
   </div>
@@ -49,7 +60,7 @@
   <div class="form-check">
       <label class="form-check-label">Is the property available?</label>
       <label class="radio-inline"><input type="radio" name="isAvailable">Yes</label>
-      <label class="radio-inline"><input type="radio" name="isAvailable"> No</label>
+      <label class="radio-inline"><input type="radio" name="isAvailable" checked="checked"> No</label>
 
   </div>
 

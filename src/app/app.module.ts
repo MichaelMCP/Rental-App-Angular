@@ -20,6 +20,7 @@ import { RegisterComponent } from './register/index';
 import { RegisterPropertyComponent } from './register-property/register-property.component';
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
+import { RegisterPropertyService } from './register-property.service';
 
 @NgModule({
     imports: [
@@ -45,7 +46,8 @@ import { AllPropertiesComponent } from './all-properties/all-properties.componen
         AuthenticationService,
         UserService,
         MyPropertiesService,
-        AllPropertiesService
+        AllPropertiesService,
+        RegisterPropertyService
     ],
     bootstrap: [AppComponent]
 })
