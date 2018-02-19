@@ -7,7 +7,7 @@
             <a class="nav-item nav-link" href="/register-property">·Register Property</a>
             <a class="nav-item nav-link" href="/Properties">·View Property Listings</a>
             <a class="nav-item nav-link" href="/my-properties">·View My Properties</a>
-            <a class="nav-item nav-link" href="/editUsers">·Edit Users</a>
+            <a class="nav-item nav-link" *ngIf = "isEmployee()" href="/editUsers">·Edit Users</a>
             <a class="nav-item nav-link" [routerLink]="['/login']"(click)="logout()">·Logout</a>
           </div>
         </div>

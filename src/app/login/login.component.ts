@@ -64,6 +64,7 @@ export class LoginComponent implements OnInit {
           } else {
               console.log('hello');
               localStorage.setItem('currentUser', JSON.stringify(user));
+              this.userService.getCurrentUser();
             this.router.navigateByUrl('/home');
           }
 

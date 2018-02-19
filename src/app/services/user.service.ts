@@ -14,6 +14,7 @@ export class UserService {
     private appUrl = 'http://localhost:8080/RentalProject';
     private headers = new Headers({'Content-Type': 'application/json'});
     private user: User;
+    private currentUser: User;
     constructor(private http: Http) { }
 
     login(email: string, password: string): Observable<User> {
@@ -50,6 +51,13 @@ export class UserService {
           }
           );
       }
+      getCurrentUser(): boolean{
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        if(this.currentUser === null || this.currentUser.role !== 3){
+            return false;
+        }
+        return true;
+    }
 
     // getAll() {
     //     return this.http.get<User[]>('/api/users');
