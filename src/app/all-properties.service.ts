@@ -5,11 +5,8 @@ import {Observable} from 'rxjs/observable';
 import {of} from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
 
-<<<<<<< HEAD
-import {Property} from './property';
-=======
-import {Property} from './models/property'
->>>>>>> viewAllProperties
+import {Property} from './models/property';
+
 @Injectable()
 export class AllPropertiesService {
   private appUrl = 'http://localhost:8080/RentalProject/Properties';

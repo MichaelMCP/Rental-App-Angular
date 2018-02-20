@@ -1,7 +1,7 @@
 export class PaymentInfo {
     id: number;
     userid: number;
-    cc: string;
-    experationDate: string;
+    cc: number;
+    ed: string;
     cvv: number;
 }

@@ -3,11 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { MyPropertiesService } from '../services/my-properties.service';
 
-<<<<<<< HEAD
-import {Property} from '../property';
-=======
-import {Property} from '../models/property'
->>>>>>> viewAllProperties
+import {Property} from '../models/property';
+
 @Component({
   selector: 'app-my-properties',
   templateUrl: './my-properties.component.html',

@@ -14,13 +14,13 @@ export class EditUserService {
 
   constructor(private http: Http) { }
 
-  getAllUser(): Observable<User[]>{
+  getAllUser(): Observable<User[]> {
     return this.http.get(this.appUrl, {withCredentials: true})
     .map(resp => resp.json() as User[]);
   }
   deleteProperties(u: User): Observable<{}> {
     const body = JSON.stringify(u);
-    return this.http.post(this.appUrl,body ,{headers: this.headers, withCredentials: true});
+    return this.http.post(this.appUrl, body , {headers: this.headers, withCredentials: true});
   }
 
 }

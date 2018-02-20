@@ -51,9 +51,9 @@ export class UserService {
           }
           );
       }
-      getCurrentUser(): boolean{
+      getCurrentUser(): boolean {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        if(this.currentUser === null || this.currentUser.role !== 3){
+        if (this.currentUser === null || this.currentUser.role !== 3) {
             return false;
         }
         return true;

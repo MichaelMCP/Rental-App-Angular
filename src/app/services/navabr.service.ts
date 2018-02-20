@@ -4,15 +4,14 @@ import { Injectable } from '@angular/core';
 export class NavabrService {
   visiable: boolean;
 
-  constructor() {this.visiable = false;}
-  hide(){
+  constructor() {this.visiable = false; }
+  hide() {
     this.visiable = false;
   }
-  show(){
+  show() {
     this.visiable = true;
   }
-  toggle()
-  {
+  toggle() {
     this.visiable = !this.visiable;
   }
 

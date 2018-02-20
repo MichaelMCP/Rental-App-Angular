@@ -10,22 +10,18 @@ import '../assets/app.css';
     templateUrl: 'app.component.html'
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
     public currentUser: User;
     constructor(
         private userService: UserService
     ) { }
-<<<<<<< HEAD
-    logout() {
-=======
 
     ngOnInit() {
       }
-    isEmployee(): boolean{
+    isEmployee(): boolean {
         return this.userService.getCurrentUser();
     }
-    logout(){
->>>>>>> viewAllProperties
+    logout() {
         this.userService.logout();
         localStorage.removeItem('currentUser');
     }
