@@ -47,6 +47,8 @@ import { AboutComponent } from './about/about.component';
         MyPropertiesComponent,
         AllPropertiesComponent,
         PaymentComponent,
+        EditUserComponent,
+        RatingComponent,
         AboutComponent,
         EditUserComponent
     ],

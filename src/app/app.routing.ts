@@ -9,9 +9,9 @@ import { AuthGuard } from './guards/index';
 import {MyPropertiesComponent} from './my-properties/my-properties.component';
 import {AllPropertiesComponent} from './all-properties/all-properties.component';
 import {PaymentComponent} from './payment/payment.component';
-import {AboutComponent} from './about/about.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { RatingComponent } from './rating/rating.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
