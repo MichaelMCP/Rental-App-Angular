@@ -1,4 +1,4 @@
-<div class='container-fluid'>
+<div class='container-fluid' id='Navin' >
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
@@ -10,7 +10,7 @@
             <a class="nav-item nav-link" href="/rating">·Rate Your Stay</a>
             <a class="nav-item nav-link" href="/about">·About Us</a>
             <a class="nav-item nav-link" *ngIf = "isEmployee()" href="/editUsers">·Edit Users</a>
-            <a class="nav-item nav-link" [routerLink]="['/login']"(click)="logout()">·Logout</a>
+            <a class="nav-item nav-link" (click)="logout()">·Logout</a>
           </div>
         </div>
       </nav>
