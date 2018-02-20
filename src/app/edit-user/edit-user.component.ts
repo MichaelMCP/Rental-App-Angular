@@ -15,11 +15,11 @@ export class EditUserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.editUserSerivce.getAllUser().subscribe(proList =>this.allUser = proList);
+    this.editUserSerivce.getAllUser().subscribe(proList => this.allUser = proList);
   }
 
-  deleteUser(u: User): void{
-    this.allUser.splice(this.allUser.indexOf(u),1);
+  deleteUser(u: User): void {
+    this.allUser.splice(this.allUser.indexOf(u), 1);
     this.editUserSerivce.deleteProperties(u).subscribe();
   }
 
