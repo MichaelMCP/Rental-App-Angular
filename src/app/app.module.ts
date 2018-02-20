@@ -24,6 +24,8 @@ import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { RatingComponent } from './rating/rating.component';
+import { RegisterPropertyService } from './register-property.service';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
     imports: [
@@ -43,7 +45,9 @@ import { RatingComponent } from './rating/rating.component';
         MyPropertiesComponent,
         AllPropertiesComponent,
         EditUserComponent,
-        RatingComponent
+        RatingComponent,
+        AboutComponent,
+        EditUserComponent
     ],
     providers: [
         AuthGuard,
@@ -53,7 +57,9 @@ import { RatingComponent } from './rating/rating.component';
         MyPropertiesService,
         AllPropertiesService,
         EditUserService,
-        RatingService
+        RatingService,
+        RegisterPropertyService,
+        EditUserService
     ],
     bootstrap: [AppComponent]
 })
