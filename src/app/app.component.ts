@@ -23,9 +23,8 @@ export class AppComponent implements OnInit {
             if (event instanceof NavigationStart) {
                 if ( this.getCurrentUser()) {
                     document.getElementById('Navin').style.display = 'block';
-                }
-                else {
-                    document.getElementById('Navin').style.display = 'none'; 
+                } else {
+                    document.getElementById('Navin').style.display = 'none';
                 }
                 console.log(document.location);
             }
@@ -42,7 +41,7 @@ export class AppComponent implements OnInit {
         localStorage.removeItem('currentUser');
         this.router.navigateByUrl('/login');
     }
-    getCurrentUser(): boolean{
+    getCurrentUser(): boolean {
         this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
         if (this.currentUser === null ) {
             return false;

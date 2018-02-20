@@ -2,11 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AllPropertiesService } from '../all-properties.service';
 
-<<<<<<< HEAD
-import {Property} from '../property';
-=======
-import {Property} from '../models/property'
->>>>>>> e047a168d345396c9ebeaeef094b939ce4c3474c
+import {Property} from '../models/property';
 @Component({
   selector: 'app-all-properties',
   templateUrl: './all-properties.component.html',

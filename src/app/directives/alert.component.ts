@@ -4,6 +4,7 @@ import { AlertService } from '../services/index';
 
 @Component({
     moduleId: module.id.toString(),
+    // tslint:disable-next-line:component-selector
     selector: 'alert',
     templateUrl: 'alert.component.html'
 })
@@ -13,6 +14,7 @@ export class AlertComponent {
 
     constructor(private alertService: AlertService) { }
 
+    // tslint:disable-next-line:use-life-cycle-interface
     ngOnInit() {
         this.alertService.getMessage().subscribe(message => { this.message = message; });
     }
