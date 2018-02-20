@@ -6,9 +6,9 @@
 
   <div class="row">
     <div class="col-md-8">
-      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !address.valid }">
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !address1.valid }">
         <label>Address Line 1</label>
-        <input class="form-control" type="text" name="address1" style="width:100%" [(ngModel)]="model.address" #address="ngModel" required />
+        <input class="form-control" type="text" name="address1" style="width:100%" [(ngModel)]="model.address1" #address1="ngModel" required />
         <div *ngIf="f.submitted && !address.valid" class="help-block">An address is required!</div>
       </div>
     </div>
@@ -18,7 +18,7 @@
     <div class="col-md-8">
       <div class="form-group">
         <label>Address Line 2</label>
-        <input class="form-control" type="text" name="address2" style="width:100%" />
+        <input class="form-control" type="text" name="address2" style="width:100%" [(ngModel)]="model.address2" #address2="ngModel"/>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@
     <div class="col-md-4">
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !price.valid }">
         <label>Renting Price</label>
-        <input type="text" class="form-control" name="rentingPrice" style="width:100%" [(ngModel)]="model.rentingPrice" #rentingPrice="ngModel" required />
+        <input type="text" class="form-control" name="rentingPrice" style="width:100%" [(ngModel)]="model.currentRentPrice" #currentRentPrice="ngModel" required />
         <div *ngIf="f.submitted && !rentingPrice.valid" class="help-block">Enter your rental price.</div>
       </div>
     </div>
@@ -59,9 +59,8 @@
 
   <div class="form-check">
       <label class="form-check-label">Is the property available?</label>
-      <label class="radio-inline"><input type="radio" name="isAvailable">Yes</label>
-      <label class="radio-inline"><input type="radio" name="isAvailable" checked="checked"> No</label>
-
+      <label class="radio-inline"><input type="radio" name="isAvailable" [value] = "1" [(ngModel)]="model.availability">Yes</label>
+      <label class="radio-inline"><input type="radio" name="isAvailable" [value] = "0" [(ngModel)]="model.availability" [checked]="checked"> No</label>
   </div>
 
   <div class="row">

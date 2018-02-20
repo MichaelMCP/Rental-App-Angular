@@ -30,7 +30,7 @@ export class RegisterPropertyService {
       prop.owner = null;
       prop.rating = 0;
       prop.zipcode = zipcode;
-
+      console.log(prop);
       this.appUrl = 'http://localhost:8080/RentalProject/register-property';
 
       return this.http.post(this.appUrl, prop, { headers: this.headers, withCredentials: true} )
