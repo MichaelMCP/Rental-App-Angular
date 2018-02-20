@@ -1,0 +1,37 @@
+<div class="container border">
+  <div class="row">
+      <h1>Current Registered Users in the System</h1>
+    <div class="col-sm" *ngFor="let user of allUser">
+      <div class="row">
+        <div class="col">
+          <h5>User Id: </h5>
+          <p>{{user.id}}</p>
+        </div>
+        <div class="col">
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Email:</h5>
+          <p>{{user.email}}</p>
+        </div>
+        <div class="col">
+       
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h5>Full Name:</h5>
+          <p>{{user.fullName}}</p>
+        </div>
+        <div class="col">
+     
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-danger" (click)= "deleteUser(user)" >Delete User</button>
+    </div>
+  </div>
+</div>
+

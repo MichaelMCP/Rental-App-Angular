@@ -14,6 +14,9 @@ import { AuthGuard } from './guards/index';
 import { AlertService, AuthenticationService, UserService } from './services/index';
 import { MyPropertiesService } from './my-properties.service';
 import { AllPropertiesService } from './all-properties.service';
+import {MyPropertiesService} from './services/my-properties.service';
+import {EditUserService} from './services/edit-user.service'
+import {AllPropertiesService} from './all-properties.service';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
@@ -21,6 +24,8 @@ import { RegisterPropertyComponent } from './register-property/register-property
 import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
 import { RegisterPropertyService } from './register-property.service';
+import { AboutComponent } from './about/about.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 @NgModule({
     imports: [
@@ -38,7 +43,9 @@ import { RegisterPropertyService } from './register-property.service';
         RegisterComponent,
         RegisterPropertyComponent,
         MyPropertiesComponent,
-        AllPropertiesComponent
+        AllPropertiesComponent,
+        AboutComponent,
+        EditUserComponent
     ],
     providers: [
         AuthGuard,
@@ -47,7 +54,8 @@ import { RegisterPropertyService } from './register-property.service';
         UserService,
         MyPropertiesService,
         AllPropertiesService,
-        RegisterPropertyService
+        RegisterPropertyService,
+        EditUserService
     ],
     bootstrap: [AppComponent]
 })
