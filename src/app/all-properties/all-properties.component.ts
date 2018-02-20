@@ -2,11 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { AllPropertiesService } from '../all-properties.service';
 
-<<<<<<< HEAD
-import {Property} from '../property';
-=======
 import {Property} from '../models/property'
->>>>>>> viewAllProperties
 @Component({
   selector: 'app-all-properties',
   templateUrl: './all-properties.component.html',
@@ -24,7 +20,7 @@ export class AllPropertiesComponent implements OnInit {
     // This runs when you click a button.
     console.log(document.getElementById('startDate').value);
     document.addEventListener('click', function(e){
-      if(e.target.className=="btn btn-primary" && (!document.getElementById('startDate').value || !document.getElementById('endDate').value){
+      if(e.target.className=="btn btn-primary" && (!document.getElementById('startDate').value || !document.getElementById('endDate').value)){
         alert('Please enter a valid start and end date to continue!');
       }
       if(e.target.className=="btn btn-primary" && document.getElementById('startDate').value && document.getElementById('endDate').value ){

@@ -8,11 +8,8 @@ import { RegisterPropertyComponent } from './register-property/index';
 import { AuthGuard } from './guards/index';
 import {MyPropertiesComponent} from './my-properties/my-properties.component';
 import {AllPropertiesComponent} from './all-properties/all-properties.component';
-<<<<<<< HEAD
-import {AboutComponent} from './about/about.component';
-=======
 import { EditUserComponent } from './edit-user/edit-user.component';
->>>>>>> viewAllProperties
+import { RatingComponent } from './rating/rating.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
@@ -22,11 +19,8 @@ const appRoutes: Routes = [
     { path: 'register-property', component: RegisterPropertyComponent },
     { path: 'my-properties', component: MyPropertiesComponent },
     { path: 'Properties', component: AllPropertiesComponent },
-<<<<<<< HEAD
-    { path: 'about', component: AboutComponent }
-=======
-    { path: 'editUsers', component: EditUserComponent }
->>>>>>> viewAllProperties
+    { path: 'editUsers', component: EditUserComponent },
+    { path: 'rating', component: RatingComponent },
 
     // otherwise redirect to home
     // { path: '**', redirectTo: '' }

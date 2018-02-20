@@ -1,0 +1,26 @@
+<html>
+  <head>
+      <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
+
+			bootstrap.min.css"> -->
+		
+  </head>
+  <body>
+    <h2>Rate Your Stay</h2>
+    <table class="table table-hover">
+      <tr>
+        <th>Property Owner</th>
+        <th>Address</th>
+        <th>Rental Price</th>
+        <th>Rating</th>
+				<th>Available</th>
+      <tr *ngFor="let x of RentedProperties">
+        <td>{{x.owner.fullName}}</td>
+        <td>{{x.address1}} {{x.address2}} {{x.city}}, {{x.state}} {{x.zipcode}}</td>
+        <td>{{x.currentRentPrice}}</td>
+        <td>{{x.rating}}</td>
+        <td>{{x.availability}}</td>
+      </tr>
+    </table>
+  </body>
+</html>

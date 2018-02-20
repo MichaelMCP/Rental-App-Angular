@@ -15,9 +15,6 @@ export class AppComponent implements OnInit{
     constructor(
         private userService: UserService
     ) { }
-<<<<<<< HEAD
-    logout() {
-=======
 
     ngOnInit() {
       }
@@ -25,7 +22,6 @@ export class AppComponent implements OnInit{
         return this.userService.getCurrentUser();
     }
     logout(){
->>>>>>> viewAllProperties
         this.userService.logout();
         localStorage.removeItem('currentUser');
     }
