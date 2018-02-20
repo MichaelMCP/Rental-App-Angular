@@ -7,7 +7,7 @@
       </div>
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !cc.valid }">
           <label for="cc">Credit Card:</label>
-          <input type="number" class="form-control" name="cc" [(ngModel)]="paymentInfo.cc" #cc="ngModel" required />
+          <input type="text" class="form-control" name="cc" [(ngModel)]="paymentInfo.cc" #cc="ngModel" required />
           <div *ngIf="f.submitted && !cc.valid" class="help-block">An cc is required!</div>
       </div>
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !ed.valid }">
@@ -17,7 +17,7 @@
       </div>
       <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !cvv.valid }">
         <label for="cvv">CVV</label>
-        <input type="number" class="form-control" name="ed" [(ngModel)]="paymentInfo.cvv" #cvv="ngModel" required />
+        <input type="number" class="form-control" name="cvv" [(ngModel)]="paymentInfo.cvv" #cvv="ngModel" required />
         <div *ngIf="f.submitted && !cvv.valid" class="help-block">A CVV is required!</div>
       </div>
       <div class="form-group">

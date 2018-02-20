@@ -22,6 +22,7 @@ import { MyPropertiesComponent } from './my-properties/my-properties.component';
 import { AllPropertiesComponent } from './all-properties/all-properties.component';
 import { PaymentComponent } from './payment/payment.component';
 import { AboutComponent } from './about/about.component';
+import { PaymentinfoService } from './services/paymentinfo.service';
 
 @NgModule({
     imports: [
@@ -49,7 +50,9 @@ import { AboutComponent } from './about/about.component';
         AuthenticationService,
         UserService,
         MyPropertiesService,
-        AllPropertiesService
+        AllPropertiesService,
+        PaymentinfoService
+
     ],
     bootstrap: [AppComponent]
 })

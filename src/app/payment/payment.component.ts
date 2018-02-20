@@ -10,7 +10,10 @@ import { PaymentInfo, User } from '../models';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  private paymentInfo: PaymentInfo;
+  private paymentInfo: PaymentInfo = new PaymentInfo();
+  private cc: number;
+  private cvv: number;
+  private ed: string;
   private user: User;
   constructor(
     private route: ActivatedRoute,
@@ -19,6 +22,11 @@ export class PaymentComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.user = JSON.parse(localStorage.getItem('currentUser'));
+    this.paymentInfo.cc = '0000-0000-0000-0000';
+    this.paymentInfo.cvv = 999;
+    this.paymentInfo.ed = 'Enter Date';
+    console.log(this.paymentInfo);
   }
 
   PaymentInfo(): void {

@@ -13,7 +13,7 @@ export class PaymentinfoService {
   constructor(private http: Http) { }
 
   storePaymentInfo(paymentInfo: PaymentInfo) {
-    this.appUrl = 'http://localhost:8080/RentalProject/payment';
+    this.appUrl = 'http://localhost:8080/RentalProject/paymentHandler';
     console.log(paymentInfo);
     return this.http.post(this.appUrl, paymentInfo, { headers: this.headers, withCredentials: true} )
     .map(resp => resp.json() as PaymentInfo);

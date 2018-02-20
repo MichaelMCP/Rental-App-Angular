@@ -3,15 +3,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="">·Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/register">·New User   </a>
             <a class="nav-item nav-link" href="/register-property">·Register Property</a>
             <a class="nav-item nav-link" href="/Properties">·View Property Listings</a>
             <a class="nav-item nav-link" href="/my-properties">·View My Properties</a>
-<<<<<<< HEAD
-            <a class="nav-item nav-link" href="/about">·About Us</a>
-=======
             <a class="nav-item nav-link" *ngIf = "isEmployee()" href="/editUsers">·Edit Users</a>
->>>>>>> viewAllProperties
             <a class="nav-item nav-link" [routerLink]="['/login']"(click)="logout()">·Logout</a>
           </div>
         </div>

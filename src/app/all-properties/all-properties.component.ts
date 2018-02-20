@@ -16,7 +16,7 @@ export class AllPropertiesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.allPropertiesService.getAllProperties().subscribe(allpro =>this.AllProperties = allpro);
+    this.allPropertiesService.getAllProperties().subscribe(allpro => this.AllProperties = allpro);
     // This runs when you click a button.
     console.log(document.getElementById('startDate').value);
     document.addEventListener('click', function(e) {
@@ -31,13 +31,13 @@ export class AllPropertiesComponent implements OnInit {
        localStorage.setItem('propertyId', JSON.stringify(e.target.name));
        localStorage.setItem('startDate', JSON.stringify(document.getElementById('startDate').value));
        localStorage.setItem('endDate', JSON.stringify(document.getElementById('endDate').value));
-       window.location.href = '/payment'; 
+       window.location.href = '/payment';
       }
     });
     }
 
   }
-  function rentMe(){
+  function rentMe() {
     console.log(this.value);
   }
 
