@@ -8,9 +8,14 @@ import { RegisterPropertyComponent } from './register-property/index';
 import { AuthGuard } from './guards/index';
 import {MyPropertiesComponent} from './my-properties/my-properties.component';
 import {AllPropertiesComponent} from './all-properties/all-properties.component';
+<<<<<<< HEAD
 import {PaymentComponent} from './payment/payment.component';
 import {AboutComponent} from './about/about.component';
+=======
+>>>>>>> d428cb31649055bb3aca3db495d46e21171c3462
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { RatingComponent } from './rating/rating.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
@@ -21,8 +26,9 @@ const appRoutes: Routes = [
     { path: 'my-properties', component: MyPropertiesComponent },
     { path: 'payment', component: PaymentComponent },
     { path: 'Properties', component: AllPropertiesComponent },
+    { path: 'editUsers', component: EditUserComponent },
+    { path: 'rating', component: RatingComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'editUsers', component: EditUserComponent }
 
     // otherwise redirect to home
     // { path: '**', redirectTo: '' }
