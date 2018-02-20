@@ -8,16 +8,8 @@ import { RegisterPropertyComponent } from './register-property/index';
 import { AuthGuard } from './guards/index';
 import {MyPropertiesComponent} from './my-properties/my-properties.component';
 import {AllPropertiesComponent} from './all-properties/all-properties.component';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {PaymentComponent} from './payment/payment.component';
 import {AboutComponent} from './about/about.component';
-=======
->>>>>>> d428cb31649055bb3aca3db495d46e21171c3462
-=======
-import {PaymentComponent} from './payment/payment.component';
-import {AboutComponent} from './about/about.component';
->>>>>>> 588d434c1c42dda6d07592fe753b97b178130a04
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { RatingComponent } from './rating/rating.component';
 
