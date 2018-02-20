@@ -19,4 +19,9 @@ export class RatingService {
 
   }
 
+  rateProperty(pro: Property): Observable<{}> {
+    const body = JSON.stringify(pro);
+    return this.http.post(this.appUrl, body , {headers: this.headers, withCredentials: true});
+  }
+
 }
