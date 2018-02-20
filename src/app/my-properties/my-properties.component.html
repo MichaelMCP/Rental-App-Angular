@@ -1,73 +1,32 @@
 <div class="container border">
   <div class="row">
       <h1>Your Current Properties</h1>
-    <div class="col-sm" *ngFor="let mypro of myProperties">
-      <div class="row">
-        <div class="col">
-          <h5>Address1: </h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.address1}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>Address2:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.address2}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>City:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.city}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>State:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.state}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>Zip Code:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.zipcode}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>Current Rental Price:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.currentRentPrice | currency}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>Rating:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.rating}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <h5>Availability:</h5>
-        </div>
-        <div class="col">
-          <p>{{mypro.availability}}</p>
-        </div>
-      </div>
-      <br>
-      <button class="btn btn-danger" (click)= "deletePro(mypro)" >Delete Property</button>
-    </div>
   </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Address1</th>
+        <th>Address2</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip</th>
+        <th>Price</th>
+        <th>Rating</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mypro of myProperties">
+        <td>{{mypro.address1}}</td>
+        <td>{{mypro.address2}}</td>
+        <td>{{mypro.city}}</td>
+        <td>{{mypro.state}}</td>
+        <td>{{mypro.zipcode}}</td>
+        <td>{{mypro.currentRentPrice}}</td>
+        <td>{{mypro.rating}}</td>
+        <td><button class="btn btn-danger" (click)= "deletePro(mypro)" >Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
+
