@@ -21,15 +21,10 @@ export class AllPropertiesComponent implements OnInit {
   ngOnInit() {
     this.allPropertiesService.getAllProperties().subscribe(allpro => this.AllProperties = allpro);
     // This runs when you click a button.
-<<<<<<< HEAD
-    document.addEventListener('click', function(e){
-      if(e.target.className=="btn btn-primary" && (!document.getElementById('startDate').value || !document.getElementById('endDate').value)){
-=======
     console.log((<HTMLInputElement>document.getElementById('startDate')).value);
     document.addEventListener('click', function(e) {
       if ((<HTMLInputElement>e.target).className === 'btn btn-primary' && (!(<HTMLInputElement>document.getElementById('startDate')).value
       || !(<HTMLInputElement>document.getElementById('endDate')).value)) {
->>>>>>> fe2ee4d0b5dbce0ecec634ef7b18d0a80fb3677e
         alert('Please enter a valid start and end date to continue!');
       }
       if ((<HTMLInputElement>e.target).className === 'btn btn-primary' && ((<HTMLInputElement>document.getElementById('startDate')).value

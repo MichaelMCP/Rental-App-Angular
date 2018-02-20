@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { RegisterPropertyService } from '../register-property.service';
-import { Property } from '../property';
+import { Property } from '../models/property';
 @Component({
   selector: 'app-register-property',
   templateUrl: './register-property.component.html',
