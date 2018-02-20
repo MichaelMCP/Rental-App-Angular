@@ -4,9 +4,7 @@ import {Http, Headers, RequestOptions} from '@angular/http';
 import {Observable} from 'rxjs/observable';
 import {of} from 'rxjs/observable/of';
 import 'rxjs/add/operator/map';
-
 import {Property} from './models/property';
-
 @Injectable()
 export class AllPropertiesService {
   private appUrl = 'http://localhost:8080/RentalProject/Properties';

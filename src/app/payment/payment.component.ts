@@ -24,6 +24,7 @@ export class PaymentComponent implements OnInit {
   ngOnInit() {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
     this.paymentInfo.cc = '0000-0000-0000-0000';
+    this.paymentInfo.user = this.user;
     this.paymentInfo.cvv = 999;
     this.paymentInfo.ed = 'Enter Date';
     console.log(this.paymentInfo);

@@ -1,6 +1,8 @@
+import { User } from '.';
+
 export class PaymentInfo {
     id: number;
-    userid: number;
+    user: User;
     cc: string;
     ed: string;
     cvv: number;

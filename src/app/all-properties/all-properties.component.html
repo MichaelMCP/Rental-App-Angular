@@ -16,14 +16,14 @@
         <th>Rental Price</th>
         <th>Rating</th>
 				<th>Available</th>
-				<th>Rent this</th>
+				<th>Rent this?</th>
       <tr *ngFor="let x of AllProperties">
         <td>{{x.owner.fullName}}</td>
         <td>{{x.address1}} {{x.address2}} {{x.city}}, {{x.state}} {{x.zipcode}}</td>
         <td>{{x.currentRentPrice}}</td>
         <td>{{x.rating}}</td>
 				<td>{{x.availability}}</td>
-				<td><input class="btn btn-primary"  type="submit" value='Rent this!' name={{x.propertyId}} id="rentThis"></td>
+				<td><input  class="btn btn-primary"  type="submit" value='Rent this!' name={{x.propertyId}} id="rentThis"></td>
       </tr>
     </table>
   </body>
