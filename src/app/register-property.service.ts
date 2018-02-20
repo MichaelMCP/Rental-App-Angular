@@ -17,14 +17,14 @@ export class RegisterPropertyService {
   constructor(private http: Http) {  }
 
   registerProperty(address1: string, address2: string, city: string,
-    states: string, currentRentPrice: number, zipcode: string,
+    state: string, currentRentPrice: number, zipcode: string,
      availability: number){
     
       const prop: Property = new Property();
       prop.address1 = address1;
       prop.address2 = address2;
       prop.city = city;
-      prop.state = states;
+      prop.state = state;
       prop.currentRentPrice = currentRentPrice;
       prop.availability = availability;
       prop.owner = null;
