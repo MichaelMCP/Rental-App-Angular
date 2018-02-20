@@ -11,6 +11,7 @@ import {AllPropertiesComponent} from './all-properties/all-properties.component'
 import {PaymentComponent} from './payment/payment.component';
 import {AboutComponent} from './about/about.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { RatingComponent } from './rating/rating.component';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] , pathMatch: 'full' },
@@ -21,8 +22,9 @@ const appRoutes: Routes = [
     { path: 'my-properties', component: MyPropertiesComponent },
     { path: 'payment', component: PaymentComponent },
     { path: 'Properties', component: AllPropertiesComponent },
+    { path: 'editUsers', component: EditUserComponent },
+    { path: 'rating', component: RatingComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'editUsers', component: EditUserComponent }
 
     // otherwise redirect to home
     // { path: '**', redirectTo: '' }

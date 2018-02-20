@@ -27,8 +27,8 @@ export class RegisterPropertyComponent{// implements OnInit {
 
   register(){
     this.registerPropertyService.registerProperty(this.model.address1,
-      this.model.address2, this.model.city, this.model.states, 
-      this.model.currentRentPrice, this.model.zipCode, this.model.availability)
+      this.model.address2, this.model.city, this.model.state, 
+      this.model.currentRentPrice, this.model.zipcode, this.model.availability)
       .subscribe(
         property => {
           this.propertyRegister = property;

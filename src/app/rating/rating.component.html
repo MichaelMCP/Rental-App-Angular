@@ -1,0 +1,41 @@
+<html>
+  <head>
+      <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/
+
+			bootstrap.min.css"> -->
+		
+  </head>
+  <body>
+    <h2>Rate Your Stay</h2>
+    <table class="table table-hover">
+      <tr>
+        <th>Property Owner</th>
+        <th>Address</th>
+        <th>Rental Price</th>
+        <th>Rating</th>
+        <th>Available</th>
+        <th>Select Rating</th>
+        <th>Rate This</th>
+      <tr *ngFor="let x of RentedProperties">
+        <td>{{x.owner.fullName}}</td>
+        <td>{{x.address1}} {{x.address2}} {{x.city}}, {{x.state}} {{x.zipcode}}</td>
+        <td>{{x.currentRentPrice}}</td>
+        <td>{{x.rating}}</td>
+        <td>{{x.availability}}</td>
+        <td> <select id = "newRate">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select> </td>
+        <td><input  class="btn btn-primary"  type="submit" value='Rate this!' name={{x.propertyId}} id="rateThis" (click)= "rate(x)"></td>
+      </tr>
+    </table>
+  </body>
+</html>
