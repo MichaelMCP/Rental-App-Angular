@@ -47,10 +47,7 @@ import { AboutComponent } from './about/about.component';
         MyPropertiesComponent,
         AllPropertiesComponent,
         PaymentComponent,
-<<<<<<< HEAD
         EditUserComponent,
-=======
->>>>>>> 63eaf123e6e407821a71ece8faa9a9d88cb232a7
         RatingComponent,
         AboutComponent,
         EditUserComponent

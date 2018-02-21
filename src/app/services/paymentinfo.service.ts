@@ -22,7 +22,7 @@ export class PaymentinfoService {
   storeRentTransactionInfo(rentTransaction: RentTransaction) {
     this.appUrl = 'http://localhost:8080/RentalProject/rentTransaction';
     console.log(rentTransaction);
-    return this.http.post(this.appUrl, RentTransaction, { headers: this.headers, withCredentials: true} )
+    return this.http.post(this.appUrl, rentTransaction, { headers: this.headers, withCredentials: true} )
     .map(resp => resp.json() as RentTransaction);
   }
 }
